@@ -38,3 +38,22 @@ header {
   border-radius: 50%;
   box-shadow: 8px 8px 8px #0005;
 }
+
+#star-field {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.star-number {
+  font-size: 32px;
+  transform: translate(17px,67px);
+}
+.star-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+}

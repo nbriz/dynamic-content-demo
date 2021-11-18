@@ -8,6 +8,10 @@
   </head>
   <body>
 
+    <section id="star-field">
+      <!-- stars will be dynamically added into this element -->
+    </section>
+
     <header>
       <h1>My Friends</h1>
     </header>
@@ -18,32 +22,6 @@
 
     <script src="js/load-data.js"></script>
     <script src="js/html-from-template.js"></script>
-    <script>
-
-      // start of "asynchronous" logic
-      (async () => {
-        // load the data from a .csv or .json file
-        const data = await loadData('data/cats.csv')
-        // the following code will run as many times as there
-        // are items in the data set
-        data.forEach(async (item) => {
-          // dynamically create html from a template file
-          const html = await htmlFromTemplate('templates/social.html', item)
-          // const html = await htmlFromTemplate('templates/folky.html', item)
-
-          // create a new <div></div> element
-          const div = document.createElement('div')
-          // add the dynamically created html to our div's content
-          div.innerHTML = html
-          // create a variable for the parent element
-          // that we want to place these new divs inside of
-          const main = document.querySelector('#main')
-          // add our <div> elements to their parent
-          main.appendChild(div)
-        })
-      // end of "asynchronous" logic
-      })()
-
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
