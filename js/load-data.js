@@ -37,7 +37,11 @@ window.loadData = async (path) => {
   if (ext === 'csv') {
     const rows = csv2arr(dat)
     const keys = rows.shift()
-    if (rows[rows.length - 1][0] === '') rows.pop()
+    // remove trailing empty row caused by an extra
+    // linebreak at the end of the csv file
+    const last = rows[rows.length - 1]
+    if (last.length === 1 && last[0] === '') rows.pop()
+    // convert CSV to JSON
     const json = []
     rows.forEach(row => {
       const obj = {}
