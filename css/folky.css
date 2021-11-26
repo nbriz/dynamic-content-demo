@@ -36,3 +36,15 @@ header {
   width: 100%;
   margin-bottom: 80px;
 }
+
+.test1 {
+  width: 200px;
+  height: 200px;
+  background-image: url(stars.gif);
+}
+
+.test2 {
+  width: 200px;
+  height: 200px;
+  background-image: url(images/stars.gif);
+}
